@@ -13,7 +13,7 @@ client.on("message", (message) => {
    client.user.setGame("http://notcat.ml")
 });
 
-setInterval(toimerrrrr, 1000);
+setInterval(toimerrrrr, 15000);
 
 function format(seconds){
   function pad(s){
@@ -31,7 +31,7 @@ function format(seconds){
 function toimerrrrr( )
 {
 	var uptime = process.uptime();
-console.log(format(uptime));
+console.log("Uptime: "+format(uptime));
 
 }
 
