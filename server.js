@@ -13,11 +13,25 @@ client.on("message", (message) => {
    client.user.setGame("http://notcat.ml")
 });
 
-setInterval(toimerrrrr, 2500);
+setInterval(toimerrrrr, 1000);
+
+function format(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+}
+
+
 
 function toimerrrrr( )
 {
-	console.log("dont make me go offline ty ty");
+	var uptime = process.uptime();
+console.log(format(uptime));
 
 }
 
