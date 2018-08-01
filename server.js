@@ -9,7 +9,7 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
 
-	client.user.setActivity('child porn.', { type: 'STREAMING' })
+	client.user.setActivity('http://notcat.ml', { type: 'LISTENING' })
    //client.user.setGame("http://notcat.ml")
 });
 
