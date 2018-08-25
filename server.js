@@ -44,7 +44,7 @@ for (var i = 0; i < gnarpics.length; i++) {
     (function(i) {
         setTimeout(function() {
 
-        // client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
+         client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
          numC++
          var uptime = process.uptime();
          console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
