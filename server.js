@@ -10,7 +10,7 @@ var gnarpics = new Array();
 var asdiiodf;
 var i;
 var numC = 0;
-var uptime = process.uptime();
+
 
 
 
@@ -41,6 +41,7 @@ for (var i = 0; i < gnarpics.length; i++) {
 
          client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
          numC++
+         var uptime = process.uptime();
          console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
      }, 240000*1.5 * i);
     })(i);
@@ -83,7 +84,7 @@ setInterval(toimerrrrr, 60000);
 
 function toimerrrrr()
 {
-	
+var uptime = process.uptime();
 console.log("Uptime: "+func.format(uptime));
 
 }
