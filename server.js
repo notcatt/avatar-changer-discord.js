@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var func = require('./functions');
-
 var glob = require("glob");
 var PastebinAPI = require('pastebin-js'),
     pastebin = new PastebinAPI('c179a88f6ab91130e3bfb6e23287ba4e');
@@ -10,6 +9,9 @@ var gnarpics = new Array();
 var asdiiodf;
 var i;
 var numC = 0;
+var fs = require('fs');
+
+eval(fs.readFileSync('web.js')+'');
 
 
 
@@ -28,7 +30,7 @@ client.on("ready", () => {
   myMethod();
 
   client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
-	setInterval(myMethod, 240050*1.5*gnarpics.length);
+	setInterval(myMethod, 240050*1.2*gnarpics.length);
 });
 
 client.on("error", console.error)
@@ -42,11 +44,18 @@ for (var i = 0; i < gnarpics.length; i++) {
     (function(i) {
         setTimeout(function() {
 
-         client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
+        // client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
          numC++
          var uptime = process.uptime();
          console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
-     }, 240000*1.5 * i);
+
+        fs.appendFile('stats.txt', 'Changed avatar '+numC+' times.'+func.format(uptime)+"</br>"+"\r\n", function (err) {
+        });
+
+
+         
+
+     }, 240000*1.2 * i);
     })(i);
 }
   	
