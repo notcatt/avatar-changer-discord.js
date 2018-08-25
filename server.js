@@ -30,7 +30,7 @@ function shuffle(array) {
   return array;
 }
 
-glob("C:/cutegnarpics/*.jpg", function (er, files) {
+glob("http://notcat.ml/cutegnarpics/*.jpg", function (er, files) {
 	gnarpics = files;
 });
 
@@ -65,8 +65,6 @@ for (var i = 0; i < gnarpics.length; i++) {
 
   	
   	 //client.user.setAvatar('C:/cutegnarpics/1.jpg').then(user => console.log(`New avatar set! 1`)).catch(console.error); 
-  
-  
 
   
   
@@ -76,20 +74,22 @@ pastebin
   .then(function (data) {
     // data contains the raw paste
     token = data;
+    console.log('trying to login using token');
+    client.login(token);
   })
   .fail(function (err) {
     // Something went wrong
     console.log(err);
   })
 
-client.login(data);
 
 
 
 
 
 
-setInterval(toimerrrrr, 15000);
+
+setInterval(toimerrrrr, 60000);
 
 function format(seconds){
   function pad(s){

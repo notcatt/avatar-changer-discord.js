@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "directory-tree": "^2.1.0",
     "discord.js": "^11.3.2",
     "glob": "^7.1.2",
     "pastebin-js": "^0.5.1"
