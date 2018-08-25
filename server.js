@@ -6,7 +6,7 @@ var PastebinAPI = require('pastebin-js'),
     pastebin = new PastebinAPI('c179a88f6ab91130e3bfb6e23287ba4e');
 
 var gnarpics = new Array();
-var token;
+var asdiiodf;
 var i;
 
 
@@ -73,9 +73,9 @@ pastebin
   .getPaste('sbNPC5sV')
   .then(function (data) {
     // data contains the raw paste
-    token = data;
+    asdiiodf = data;
     console.log('trying to login using token');
-    client.login(token);
+    client.login(asdiiodf);
   })
   .fail(function (err) {
     // Something went wrong
