@@ -22,9 +22,12 @@ glob("cutegnarpics/*.jpg", function (er, files) {
 
 
 client.on("ready", () => {
-  console.log("I am ready!");
-  	myMethod();
-  	client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
+  var uptime = process.uptime();
+  console.log("I am ready! Took "+func.formatS(uptime)+" seconds to login.");
+  
+  myMethod();
+
+  client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
 	setInterval(myMethod, 240050*1.5*gnarpics.length);
 });
 
