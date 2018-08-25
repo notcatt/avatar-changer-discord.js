@@ -8,7 +8,7 @@ var PastebinAPI = require('pastebin-js'),
 var gnarpics = new Array();
 var asdiiodf;
 var i;
-
+var numC;
 
 
 function shuffle(array) {
@@ -55,7 +55,8 @@ for (var i = 0; i < gnarpics.length; i++) {
         setTimeout(function() {
 
          client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
-
+         numC++
+         console.log("Changed avatar "+numC+" times in the span of "+format(uptime));
      }, 240000*1.5 * i);
     })(i);
 }
