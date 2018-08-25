@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+var func = require('./functions');
 
 var glob = require("glob");
 var PastebinAPI = require('pastebin-js'),
@@ -8,27 +9,11 @@ var PastebinAPI = require('pastebin-js'),
 var gnarpics = new Array();
 var asdiiodf;
 var i;
-var numC;
+var numC = 0;
+var uptime = process.uptime();
 
 
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
 
 glob("cutegnarpics/*.jpg", function (er, files) {
 	gnarpics = files;
@@ -48,7 +33,7 @@ client.on("error", console.error)
 function myMethod( )
 {
 	
-gnarpics = shuffle(gnarpics)
+gnarpics = func.shuffle(gnarpics)
 
 for (var i = 0; i < gnarpics.length; i++) {
     (function(i) {
@@ -56,7 +41,7 @@ for (var i = 0; i < gnarpics.length; i++) {
 
          client.user.setAvatar(gnarpics[i].toString()).then(user => console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`)).catch(console.error); // 
          numC++
-         console.log("Changed avatar "+numC+" times in the span of "+format(uptime));
+         console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
      }, 240000*1.5 * i);
     })(i);
 }
@@ -92,22 +77,13 @@ pastebin
 
 setInterval(toimerrrrr, 60000);
 
-function format(seconds){
-  function pad(s){
-    return (s < 10 ? '0' : '') + s;
-  }
-  var hours = Math.floor(seconds / (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
-  var seconds = Math.floor(seconds % 60);
 
-  return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
-}
 
 
 
 function toimerrrrr()
 {
-	var uptime = process.uptime();
-console.log("Uptime: "+format(uptime));
+	
+console.log("Uptime: "+func.format(uptime));
 
 }
