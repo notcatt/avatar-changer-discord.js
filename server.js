@@ -30,7 +30,7 @@ function shuffle(array) {
   return array;
 }
 
-glob("http://notcat.ml/cutegnarpics/*.jpg", function (er, files) {
+glob("cutegnarpics/*.jpg", function (er, files) {
 	gnarpics = files;
 });
 
