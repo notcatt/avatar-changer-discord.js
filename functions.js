@@ -38,7 +38,7 @@ module.exports = {
     return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
 
 
-  }
+  },
 
   formatS: function (seconds) {
 
