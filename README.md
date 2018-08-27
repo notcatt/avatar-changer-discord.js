@@ -1,3 +1,28 @@
-# youz a bitch
+# you are a cunt
 
-lmao
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ # you are a cunt
+
+fuck
+ 
