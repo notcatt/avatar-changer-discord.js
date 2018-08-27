@@ -30,7 +30,7 @@ client.on("ready", () => {
   myMethod();
 
   client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
-	setInterval(myMethod, 240050*1.2*gnarpics.length);
+	setInterval(myMethod, 240050*1.4*gnarpics.length);
 });
 
 client.on("error", console.error)
@@ -55,7 +55,7 @@ for (var i = 0; i < gnarpics.length; i++) {
 
          
 
-     }, 240000*1.2 * i);
+     }, 240000*1.4 * i);
     })(i);
 }
   	
