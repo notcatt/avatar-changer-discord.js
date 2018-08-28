@@ -81,7 +81,7 @@ function changeAvatar()
               console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`);
               console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
             })
-            .catch(console.log('ur changing ur avatar too fast lol')); // 
+            .catch(function(err){console.log('-------ERROR------- [ ur changing ur avatar too fast lol ] -------ERROR-------');}); // 
             numC++
             var uptime = process.uptime();
             
