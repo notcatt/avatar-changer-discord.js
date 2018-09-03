@@ -1,28 +1,3 @@
-# you are a cunt
+# changes avatar every 6 minutes
 
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- # you are a cunt
-
-fuck
- 
+its pretty cool i guess.
