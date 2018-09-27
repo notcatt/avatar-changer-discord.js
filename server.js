@@ -6,7 +6,7 @@ const glob = require('glob');
       pastebin = new PastebinAPI('c179a88f6ab91130e3bfb6e23287ba4e'); // my token for pastebin dev api
 const client = new Discord.Client(); // allows us to target the same client instance every time
 
-var gnarpics = new Array(); // create array
+var pictures = new Array(); // create array
 var numC = 0;
 var loginToken;
 var i;
@@ -41,8 +41,8 @@ pastebin.getPaste('51qcEMnM').then(function (data)
 })
 
 // output a folder of images to an array
-glob("cutegnarpics/*.jpg", function (er, files) {
-  gnarpics = files;
+glob("yeet/*.jpg", function (er, files) {
+  pictures = files;
 });
 
 
@@ -58,7 +58,7 @@ client.on("ready", () => {
   client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
 
   changeAvatar();
-	setInterval(changeAvatar, 336000 * gnarpics.length);
+	setInterval(changeAvatar, 336000 * pictures.length);
 });
 
 client.on("error", console.error) // if the client errors or we go offline, log the error.pp
@@ -70,15 +70,16 @@ client.on("error", console.error) // if the client errors or we go offline, log 
 function changeAvatar()
 {
   // shuffles the array of pictures using the function in functions.js
-  gnarpics = func.shuffle(gnarpics)
+  // pictures = func.shuffle(pictures)
+  // commented out beacuse no need beacuse i am now doing it sequentionally (1234567..ect)
 
   // really fucking clunky way to put a delay in a for loop lmfao, do not do this lmfao
-  for (var i = 0; i < gnarpics.length; i++) {
+  for (var i = 0; i < pictures.length; i++) {
       (function(i) {
           setTimeout(function() {
-            client.user.setAvatar(gnarpics[i].toString())
+            client.user.setAvatar(pictures[i].toString())
             .then(user => {
-              console.log(`New avatar set! ( `+gnarpics[i].toString()+` )`);
+              console.log(`New avatar set! ( `+pictures[i].toString()+` )`);
               console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
             })
             .catch(function(err){console.log('-------ERROR------- [ ur changing ur avatar too fast lol ] -------ERROR-------');}); // 
