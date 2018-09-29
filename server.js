@@ -55,7 +55,7 @@ glob("yeet/*.jpg", function (er, files) {
 client.on("ready", () => {
   var uptime = process.uptime();
   console.log("I am ready! Took "+func.formatS(uptime)+" seconds to login.");
-  client.user.setActivity('http://notcat.ml', { type: 'LISTENING' });
+  client.user.setActivity('lmao u gay', { type: 'STREAMING' });
 
   changeAvatar();
 	setInterval(changeAvatar, 336000 * pictures.length);
