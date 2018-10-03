@@ -83,6 +83,15 @@ client.on('message', msg => {
     if(msg.content == "-josh"){
       msg.edit(`https://i.imgur.com/PdB88Zg.jpg`)
     }
+    if(msg.content == "-beth"){
+      msg.edit(`https://cdn.discordapp.com/attachments/161284437311488000/491835114322657290/Ok_now_this_is_cool.mp4`)
+    }
+    if(msg.content == "-sean"){
+      msg.edit(`https://cdn.discordapp.com/attachments/336990201794789376/459550603891310632/video.mov`)
+    }
+    if(msg.content == "-sean"){
+      msg.edit(`https://i.imgur.com/gk157oT.jpg`)
+    }
   }
 
 });
