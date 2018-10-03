@@ -63,8 +63,14 @@ client.on("ready", () => {
 
 client.on("error", console.error) // if the client errors or we go offline, log the error.pp
 
+client.on('message', msg => {
+  if(msg.author.id === "159889018862043137") {
+    if(msg.content == "-nou"){
+      msg.edit(`https://i.imgur.com/IxDEdxW.png`)
+    }
+  }
 
-
+});
 
 // the function to change avatars, called every 6 minutes (takes 6 minutes go go through every picture on the array)
 function changeAvatar()
