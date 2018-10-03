@@ -68,6 +68,21 @@ client.on('message', msg => {
     if(msg.content == "-nou"){
       msg.edit(`https://i.imgur.com/IxDEdxW.png`)
     }
+    if(msg.content == "-owo"){
+      msg.edit(`https://i.imgur.com/lWvaHP8.png`)
+    }
+    if(msg.content == "-spin"){
+      msg.edit(`https://i.imgur.com/B9d3uTH.gifv`)
+    }
+    if(msg.content == "-bortnite"){
+      msg.edit(`https://i.imgur.com/6vaOAuu.gifv`)
+    }
+    if(msg.content == "-fap"){
+      msg.edit(`https://i.imgur.com/iDxaaGD.jpg`)
+    }
+    if(msg.content == "-josh"){
+      msg.edit(`https://i.imgur.com/PdB88Zg.jpg`)
+    }
   }
 
 });
