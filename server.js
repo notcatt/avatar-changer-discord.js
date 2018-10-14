@@ -41,7 +41,7 @@ pastebin.getPaste('51qcEMnM').then(function (data)
 })
 
 // output a folder of images to an array
-glob("yeet/*.jpg", function (er, files) {
+glob("yeet/*.png", function (er, files) {
   pictures = files;
 });
 
