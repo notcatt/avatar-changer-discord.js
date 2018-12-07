@@ -89,8 +89,13 @@ client.on('message', msg => {
     if(msg.content == "-sean"){
       msg.edit(`https://cdn.discordapp.com/attachments/336990201794789376/459550603891310632/video.mov`)
     }
-    if(msg.content == "-sean"){
+    if(msg.content == "-damon"){
       msg.edit(`https://i.imgur.com/gk157oT.jpg`)
+    }
+    if(msg.content.startsWith("-info ")){
+    	console.log("PLEASE")
+    	let member = msg.mentions.members.first()
+      msg.reply(member.joinedTimestamp)
     }
   }
 
@@ -110,7 +115,7 @@ function changeAvatar()
             client.user.setAvatar(pictures[i].toString())
             .then(user => {
               console.log(`New avatar set! ( `+pictures[i].toString()+` )`);
-              console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
+           //  console.log("Changed avatar "+numC+" times in the span of "+func.format(uptime));
             })
             .catch(function(err){console.log('-------ERROR------- [ ur changing ur avatar too fast lol ] -------ERROR-------');}); // 
             numC++
