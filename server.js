@@ -27,7 +27,7 @@ console.log('Uptime: '+func.format(uptime));
 // from a paste on pb
 console.log('trying to login using token'); // log that we are trying to login.
 
-pastebin.getPaste('51qcEMnM').then(function (data) 
+pastebin.getPaste('16huwYu7').then(function (data) 
   {
     loginToken = data;
       // we would put the console.log here but since it only does this code if it successfully returns the paste
